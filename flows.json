@@ -1,1 +1,901 @@
-[]
+[
+    {
+        "id": "bf5e655127c9578c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "349ceb200862d9ec",
+        "type": "ui-base",
+        "name": "ui_template.label.myDashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": true
+    },
+    {
+        "id": "32f82da62f7d827b",
+        "type": "ui-theme",
+        "name": "ui_template.themes.defaultTheme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "3c778dbe032c5ce3",
+        "type": "ui-page",
+        "name": "Weather App",
+        "ui": "349ceb200862d9ec",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "notebook",
+        "theme": "32f82da62f7d827b",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "bc0c0b81c4fa9020",
+        "type": "ui-group",
+        "name": "Información general",
+        "page": "3c778dbe032c5ce3",
+        "width": 5,
+        "height": 1,
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0cdd2d881ca76402",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "weather_tab",
+        "type": "ui_tab",
+        "name": "Dashboard Climático - Paraná",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "info_group",
+        "type": "ui_group",
+        "name": "Información General",
+        "tab": "weather_tab",
+        "order": 1,
+        "disp": true,
+        "width": 13,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "362fccc6143044db",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 3,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "27289f15558c5425",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 5,
+        "width": 4,
+        "height": 1
+    },
+    {
+        "id": "6bc3dd51f1ddc246",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 8,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "a79ad5955f430178",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 10,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "d4eaf2d31a72c141",
+        "type": "ui_spacer",
+        "z": "bf5e655127c9578c",
+        "name": "spacer",
+        "group": "info_group",
+        "order": 13,
+        "width": 2,
+        "height": 1
+    },
+    {
+        "id": "bb2bf3896d71549a",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "70c5ac94f46c00d3",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "78302da6e441ced1",
+        "type": "http request",
+        "z": "bf5e655127c9578c",
+        "name": "Geocoding API",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 660,
+        "y": 120,
+        "wires": [
+            [
+                "d63b93ca23c47bf1",
+                "79d363965f2c9137"
+            ]
+        ]
+    },
+    {
+        "id": "d63b93ca23c47bf1",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "73f890d084667d65",
+        "type": "http request",
+        "z": "bf5e655127c9578c",
+        "name": "CurrentWeather API",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 740,
+        "y": 280,
+        "wires": [
+            [
+                "282aebe1ec5977ef",
+                "7b953dc06222bf54"
+            ]
+        ]
+    },
+    {
+        "id": "cd4ece94f26ed638",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "a81bfe381a299ae8",
+        "type": "template",
+        "z": "bf5e655127c9578c",
+        "name": "Armar URL CurrentWeather",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "https://api.openweathermap.org/data/2.5/weather?lat={{lat}}&lon={{lon}}&appid=029e2971fd993ff3081a6fdf47ad6f19&units=metric&lang=es\n",
+        "output": "str",
+        "x": 440,
+        "y": 280,
+        "wires": [
+            [
+                "cd4ece94f26ed638",
+                "73f890d084667d65"
+            ]
+        ]
+    },
+    {
+        "id": "79d363965f2c9137",
+        "type": "change",
+        "z": "bf5e655127c9578c",
+        "name": "Extraer datos",
+        "rules": [
+            {
+                "t": "set",
+                "p": "lat",
+                "pt": "msg",
+                "to": "payload[0].lat",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "lon",
+                "pt": "msg",
+                "to": "payload[0].lon",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "ciudad",
+                "pt": "msg",
+                "to": "payload[0].name",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "provincia",
+                "pt": "msg",
+                "to": "payload[0].state",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "pais",
+                "pt": "msg",
+                "to": "payload[0].country",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "a81bfe381a299ae8",
+                "828406ef2e1208af"
+            ]
+        ]
+    },
+    {
+        "id": "828406ef2e1208af",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 380,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "af600b1514659483",
+        "type": "template",
+        "z": "bf5e655127c9578c",
+        "name": "Armar URL Geocoding",
+        "field": "url",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "http://api.openweathermap.org/geo/1.0/direct?q=${{payload}}&limit=5&appid=029e2971fd993ff3081a6fdf47ad6f19&lang=es",
+        "output": "str",
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "bb2bf3896d71549a",
+                "78302da6e441ced1"
+            ]
+        ]
+    },
+    {
+        "id": "7b953dc06222bf54",
+        "type": "debug",
+        "z": "bf5e655127c9578c",
+        "name": "debug 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "282aebe1ec5977ef",
+        "type": "link out",
+        "z": "bf5e655127c9578c",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "3f6debe566d11896"
+        ],
+        "x": 915,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "d6b36dd66d0e8bba",
+        "type": "function",
+        "z": "bf5e655127c9578c",
+        "name": "function 2",
+        "func": "msg.payload = msg.ciudad + \", \" + msg.provincia + \", \" + msg.pais\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 460,
+        "wires": [
+            [
+                "ce88f856b7c6a798"
+            ]
+        ]
+    },
+    {
+        "id": "ce88f856b7c6a798",
+        "type": "ui-text",
+        "z": "bf5e655127c9578c",
+        "group": "bc0c0b81c4fa9020",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "name": "Ubicació mostrada",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "style": true,
+        "font": "",
+        "fontSize": "25",
+        "color": "#4d4d4d",
+        "wrapText": true,
+        "className": "",
+        "x": 570,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "3f6debe566d11896",
+        "type": "link in",
+        "z": "bf5e655127c9578c",
+        "name": "link in 2",
+        "links": [
+            "282aebe1ec5977ef"
+        ],
+        "x": 115,
+        "y": 620,
+        "wires": [
+            [
+                "8a70acc69e37fa08",
+                "50161b4d32376c35",
+                "8f299cad6feb32e9",
+                "6dfad29aae79e5b5",
+                "22c23a16eb8b868c",
+                "258158d220f7d0df",
+                "8c4ea50945603061",
+                "d6b36dd66d0e8bba"
+            ]
+        ]
+    },
+    {
+        "id": "8a70acc69e37fa08",
+        "type": "ui-template",
+        "z": "bf5e655127c9578c",
+        "group": "bc0c0b81c4fa9020",
+        "page": "",
+        "ui": "",
+        "name": "ícono",
+        "order": 3,
+        "width": 1,
+        "height": 3,
+        "head": "",
+        "format": "<img\n  :src=\"`https://openweathermap.org/img/wn/${msg.payload.weather[0].icon}@2x.png`\"\n  style=\"width: 70px; height: 70px;\"\n  alt=\"weather icon\"\n/>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 330,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "50161b4d32376c35",
+        "type": "template",
+        "z": "bf5e655127c9578c",
+        "name": "temperatura",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload.main.temp}} ºC",
+        "output": "str",
+        "x": 350,
+        "y": 580,
+        "wires": [
+            [
+                "2f26e7f7371700c6"
+            ]
+        ]
+    },
+    {
+        "id": "8f299cad6feb32e9",
+        "type": "template",
+        "z": "bf5e655127c9578c",
+        "name": "ST",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{{payload.main.feels_like}} ºC",
+        "output": "str",
+        "x": 330,
+        "y": 620,
+        "wires": [
+            [
+                "2257a7e08cc3a951"
+            ]
+        ]
+    },
+    {
+        "id": "2f26e7f7371700c6",
+        "type": "ui-text",
+        "z": "bf5e655127c9578c",
+        "group": "bc0c0b81c4fa9020",
+        "order": 4,
+        "width": 2,
+        "height": 1,
+        "name": "Temperatura",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": true,
+        "font": "Verdana,Verdana,Geneva,sans-serif",
+        "fontSize": "45",
+        "color": "#ce5403",
+        "wrapText": false,
+        "className": "",
+        "x": 550,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "2257a7e08cc3a951",
+        "type": "ui-text",
+        "z": "bf5e655127c9578c",
+        "group": "bc0c0b81c4fa9020",
+        "order": 6,
+        "width": 2,
+        "height": 0,
+        "name": "ST",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": true,
+        "font": "",
+        "fontSize": "30",
+        "color": "#4f4f4f",
+        "wrapText": false,
+        "className": "",
+        "x": 530,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "a6f156c136588338",
+        "type": "ui-text",
+        "z": "bf5e655127c9578c",
+        "group": "bc0c0b81c4fa9020",
+        "order": 8,
+        "width": "2",
+        "height": "1",
+        "name": "descripcion",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "style": true,
+        "font": "",
+        "fontSize": "20",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 550,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "1c987d87f93b6a0e",
+        "type": "ui-text",
+        "z": "bf5e655127c9578c",
+        "group": "bc0c0b81c4fa9020",
+        "order": 9,
+        "width": 2,
+        "height": 0,
+        "name": "Presión",
+        "label": "Presión: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Helvetica, sans-serif",
+        "fontSize": "25",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 540,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "581e2b9713c769a6",
+        "type": "ui-text",
+        "z": "bf5e655127c9578c",
+        "group": "bc0c0b81c4fa9020",
+        "order": 5,
+        "width": 2,
+        "height": 0,
+        "name": "Viento",
+        "label": "Viento: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Helvetica, sans-serif",
+        "fontSize": "25",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 530,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "6dfad29aae79e5b5",
+        "type": "function",
+        "z": "bf5e655127c9578c",
+        "name": "humedad",
+        "func": "msg.payload = msg.payload.main.humidity + \" %\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 740,
+        "wires": [
+            [
+                "c83009f7f8c9a9c1"
+            ]
+        ]
+    },
+    {
+        "id": "22c23a16eb8b868c",
+        "type": "function",
+        "z": "bf5e655127c9578c",
+        "name": "presion",
+        "func": "msg.payload = msg.payload.main.pressure + \" hPa\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 780,
+        "wires": [
+            [
+                "1c987d87f93b6a0e"
+            ]
+        ]
+    },
+    {
+        "id": "258158d220f7d0df",
+        "type": "function",
+        "z": "bf5e655127c9578c",
+        "name": "viento",
+        "func": "msg.payload = msg.payload.wind.speed + \" m/s\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 820,
+        "wires": [
+            [
+                "581e2b9713c769a6"
+            ]
+        ]
+    },
+    {
+        "id": "c83009f7f8c9a9c1",
+        "type": "ui-text",
+        "z": "bf5e655127c9578c",
+        "group": "bc0c0b81c4fa9020",
+        "order": 7,
+        "width": 2,
+        "height": 0,
+        "name": "Humedad",
+        "label": "Humedad: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "Helvetica, sans-serif",
+        "fontSize": "25",
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "x": 540,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "492ede3abee6cd1b",
+        "type": "ui-text-input",
+        "z": "bf5e655127c9578c",
+        "group": "bc0c0b81c4fa9020",
+        "name": "Ubicación",
+        "label": "Ingresar ubicación",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "topic": "topic",
+        "topicType": "msg",
+        "mode": "text",
+        "tooltip": "",
+        "delay": 300,
+        "passthru": true,
+        "sendOnDelay": false,
+        "sendOnBlur": true,
+        "sendOnEnter": true,
+        "className": "",
+        "clearable": false,
+        "sendOnClear": false,
+        "icon": "",
+        "iconPosition": "left",
+        "iconInnerPosition": "inside",
+        "x": 200,
+        "y": 120,
+        "wires": [
+            [
+                "af600b1514659483",
+                "70c5ac94f46c00d3"
+            ]
+        ]
+    },
+    {
+        "id": "8c4ea50945603061",
+        "type": "function",
+        "z": "bf5e655127c9578c",
+        "name": "function 1",
+        "func": "msg.payload = msg.payload.weather[0].description\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 680,
+        "wires": [
+            [
+                "a6f156c136588338"
+            ]
+        ]
+    }
+]
