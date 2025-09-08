@@ -869,7 +869,7 @@
         "icon": "",
         "iconPosition": "left",
         "iconInnerPosition": "inside",
-        "x": 160,
+        "x": 140,
         "y": 120,
         "wires": [
             [
